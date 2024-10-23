@@ -4,10 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- {% load static %} -->
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+     <style>
+        body{
+            background-color: #5e172f; 
+            color: #E5F4E3;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 80px; 
+}
+table,th{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+#a{
+    text-decoration: none;
+    color: #17113f;
+    font-size: 20px;
+    padding: 20px;
+ 
+}
+#a:hover{
+    background-color: #101755;
+    color: white;
+    border-radius: 20px;
+
+}
+     </style>
 </head>
 <body>
     <h1>welcome</h1>
+    <table>
+        <tr>
+            <th><a id="a" href="add">Add students</a> <br></th>
+        </tr>
+        <tr>
+            <th><a id="a" href="view">View students</a><br></th>
+        </tr>
+        <tr>
+            <th><a id="a" href="update">Update students</a><br></th>
+        </tr>
+        <tr>
+            <th><a id="a" href="search">Search students</a><br></th>
+        </tr>
+        <tr>
+            <th><a id="a" href="delete">Delete students</a><br></th>
+        </tr>
+    </table>
+
 </body>
 </html>
