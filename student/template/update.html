@@ -66,11 +66,13 @@ table,th,td{
             <td>{{std.place}}</td>
             <td>{{std.email}}</td>
             <td>{{std.phone}}</td>
-            <td><a class="btn btn-warning" href="edit">Edit</a></td>
+            <td><a class="btn btn-outline-warning" href="edit/{{std.roll}}">Edit</a>
+            <a class="btn btn-outline-danger" href="delete/{{std.roll}}">Delete</a></td>
+
         </tr>
         {% endfor %}
 
     </table>
-    <a href="index"><input class="btn btn-primary" type="button" value="back"></a>
+    <a href="/index"><input class="btn btn-primary" type="button" value="back"></a>
 </body>
 </html>

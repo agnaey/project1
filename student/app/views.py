@@ -28,23 +28,30 @@ def update_std(req):
     data=std
     return render(req,'update.html',{'data':data})
 
-def edit_std(request):
-    # for i in std:
-    #     if i['roll']==roll:
+def edit_std(request,roll):
+    for i in std:
+        if i['roll']==roll:
+            std=i
             
-    #         if request.method=='POST':
-    #             roll = request.POST('roll')
-    #             name = request.POST('name')
-    #             age = request.POST('age')
-    #             place = request.POST('place')
-    #             email = request.POST('email')
-    #             phone = request.POST('phone')
-    #             i['roll']=roll
-    #             i['name']=name
-    #             i['age']=age
-    #             i['place']=place
-    #             i['email']=email
-    #             i['phone']=phone
-    #return redirect(edit_std)
+            if request.method=='POST':
+                roll = request.POST('roll')
+                name = request.POST('name')
+                age = request.POST('age')
+                place = request.POST('place')
+                email = request.POST('email')
+                phone = request.POST('phone')
+                std['roll']=roll
+                std['name']=name
+                std['age']=age
+                std['place']=place
+                std['email']=email
+                std['phone']=phone
+                return redirect(update_std)
     return render(request,'edit.html',{'std':std})
+
+def delete_std(request,roll):
+    for i in std:
+        if i['roll']==roll:
+            std.remove(i)
+    return redirect(update_std)
 
