@@ -55,3 +55,12 @@ def delete_std(request,roll):
             std.remove(i)
     return redirect(update_std)
 
+# def search_std(request,roll):
+#     for i in std:
+#         if i['roll']==roll:
+#             std=i
+#             return render(request,'search.html',{'std':std})
+
+
+                                                                                                                           
+
